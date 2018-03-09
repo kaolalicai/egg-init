@@ -1,5 +1,5 @@
 {
-  "extends": "eslint-config-egg",
+  "extends": "eslint-config-klg",
   "rules": {
     "no-unused-vars": "off"
   }

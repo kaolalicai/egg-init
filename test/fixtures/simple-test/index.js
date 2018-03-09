@@ -1,26 +1,26 @@
-'use strict';
+'use strict'
 
 module.exports = {
   name: {
-    desc: 'project name',
+    desc: 'project name'
   },
   description: {
-    desc: 'project description',
+    desc: 'project description'
   },
   author: {
     desc: 'project author',
-    default: 'TZ',
+    default: 'TZ'
   },
   defaultFn: {
     desc: 'test default fn',
-    default(vars) {
-      return 'default-' + vars.name;
-    },
+    default (vars) {
+      return 'default-' + vars.name
+    }
   },
   filterFn: {
     desc: 'test filter fn',
-    filter(v) {
-      return 'filter-' + v;
-    },
-  },
-};
+    filter (v) {
+      return 'filter-' + v
+    }
+  }
+}

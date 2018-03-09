@@ -1,16 +1,16 @@
-'use strict';
+'use strict'
 
 module.exports = class Helper {
-  constructor(command) {
-    this.command = command;
-    this.inquirer = command.inquirer;
-    this.originPrompt = this.inquirer.prompt;
-    this.KEY_UP = '\u001b[A';
-    this.KEY_DOWN = '\u001b[B';
-    this.KEY_LEFT = '\u001b[D';
-    this.KEY_RIGHT = '\u001b[C';
-    this.KEY_ENTER = '\n';
-    this.KEY_SPACE = ' ';
+  constructor (command) {
+    this.command = command
+    this.inquirer = command.inquirer
+    this.originPrompt = this.inquirer.prompt
+    this.KEY_UP = '\u001b[A'
+    this.KEY_DOWN = '\u001b[B'
+    this.KEY_LEFT = '\u001b[D'
+    this.KEY_RIGHT = '\u001b[C'
+    this.KEY_ENTER = '\n'
+    this.KEY_SPACE = ' '
   }
 
   /**
@@ -21,26 +21,26 @@ module.exports = class Helper {
    * @example
    *   mock([ helper.KEY_DOWN + helper.KEY_DOWN, [ 'test', 'this is xxx', 'TZ' ]]);
    */
-  mock(actions) {
+  mock (actions) {
     this.inquirer.prompt = opts => {
-      const result = this.originPrompt.call(this.inquirer, opts);
-      const key = actions.shift() || '\n';
+      const result = this.originPrompt.call(this.inquirer, opts)
+      const key = actions.shift() || '\n'
       if (key) {
         if (Array.isArray(opts) && !Array.isArray(key)) {
-          throw new Error(`prompt multiple question, but mock with only one key \`${key}\`, should provide array`);
+          throw new Error(`prompt multiple question, but mock with only one key \`${key}\`, should provide array`)
         } else {
-          this.sendKey(key);
+          this.sendKey(key)
         }
       }
-      return result;
-    };
+      return result
+    }
   }
 
   /**
    * restore prompt to origin fn
    */
-  restore() {
-    this.inquirer.prompt = this.originPrompt;
+  restore () {
+    this.inquirer.prompt = this.originPrompt
   }
 
   /**
@@ -49,19 +49,19 @@ module.exports = class Helper {
    * @param {String/Array} arr - key list, send one by one after a tick
    * @return {Promise} after all sent
    */
-  sendKey(arr) {
+  sendKey (arr) {
     if (Array.isArray(arr)) {
       return arr.reduce((promise, key) => {
-        return promise.then(() => this.sendKey(key));
-      }, Promise.resolve());
+        return promise.then(() => this.sendKey(key))
+      }, Promise.resolve())
     } else {
-      const key = arr;
+      const key = arr
       return new Promise(resolve => {
         setTimeout(() => {
-          process.stdin.emit('data', key + '\n');
-          resolve(key);
-        }, 10);
-      });
+          process.stdin.emit('data', key + '\n')
+          resolve(key)
+        }, 10)
+      })
     }
   }
-};
+}

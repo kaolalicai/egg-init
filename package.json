@@ -1,28 +1,29 @@
 {
-  "name": "egg-init",
+  "name": "klg-init",
   "version": "1.13.0",
-  "description": "Init egg app helper tools.",
+  "description": "Init klg app helper tools.",
   "main": "lib/init_command.js",
   "scripts": {
     "lint": "eslint bin lib test",
     "test": "npm run lint -- --fix && egg-bin test",
-    "cov": "egg-bin cov",
+    "cov": "klg-bin cov",
     "ci": "npm run lint && egg-bin cov",
     "autod": "autod"
   },
   "preferGlobal": true,
   "bin": {
-    "egg-init": "bin/egg-init.js"
+    "klg-init": "bin/klg-init.js"
   },
   "files": [
     "bin",
     "lib"
   ],
   "dependencies": {
+    "brace-expansion": "^1.1.11",
     "co": "^4.6.0",
     "colors": "^1.1.2",
     "compressing": "^1.2.3",
-    "egg-init-config": "^1.2.0",
+    "eslint-config-klg": "file:../eslint-config-klg",
     "glob": "^7.1.2",
     "group-object": "^0.1.1",
     "inquirer": "^3.0.6",
@@ -34,39 +35,36 @@
     "mz-modules": "^2.0.0",
     "node-homedir": "^1.1.0",
     "npm-updater": "^3.0.3",
-    "urllib": "^2.25.1",
     "proxy-agent": "^2.1.0",
+    "urllib": "^2.25.1",
     "yargs": "^10.0.3"
   },
   "devDependencies": {
     "autod": "^3.0.1",
     "coffee": "^3.3.0",
-    "egg-bin": "^1.11.1",
-    "egg-ci": "^1.1.0",
     "eslint": "^4.13.1",
-    "eslint-config-egg": "^5.1.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
     "intelli-espower-loader": "^1.0.1",
-    "power-assert": "^1.4.4",
-    "rimraf": "^2.6.1",
     "mm": "^2.2.0",
+    "power-assert": "^1.4.4",
     "proxy": "^0.2.4",
+    "rimraf": "^2.6.1",
     "webstorm-disable-index": "^1.0.11"
   },
-  "homepage": "https://github.com/eggjs/egg-init",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eggjs/egg-init.git"
+    "url": "https://github.com/klgjs/klg-init.git"
   },
-  "bugs": "https://github.com/eggjs/egg/issues",
   "keywords": [
-    "egg",
-    "egg-init"
+    "klg",
+    "klg-init"
   ],
-  "ci": {
-    "version": "4, 6, 8"
-  },
   "engines": {
     "node": ">=4.0.0"
   },
-  "author": "fengmk2 <fengmk2@gmail.com> (http://fengmk2.com)"
+  "author": "nick"
 }

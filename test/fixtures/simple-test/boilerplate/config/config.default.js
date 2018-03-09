@@ -1,3 +1,3 @@
-'use strict';
+'use strict'
 
-exports.project = '{{name}}';
+exports.project = '{{name}}'
