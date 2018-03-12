@@ -1,6 +1,6 @@
 {
   "name": "klg-init",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Init klg app helper tools.",
   "main": "lib/init_command.js",
   "scripts": {
@@ -53,7 +53,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/klgjs/klg-init.git"
+    "url": "https://github.com/kaolalicai/egg-init.git"
   },
   "keywords": [
     "klg",
