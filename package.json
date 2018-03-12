@@ -1,6 +1,6 @@
 {
   "name": "klg-init",
-  "version": "1.13.0",
+  "version": "1.0.1",
   "description": "Init klg app helper tools.",
   "main": "lib/init_command.js",
   "scripts": {
@@ -43,11 +43,7 @@
     "autod": "^3.0.1",
     "coffee": "^3.3.0",
     "eslint": "^4.13.1",
-    "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-node": "^6.0.1",
-    "eslint-plugin-promise": "^3.7.0",
-    "eslint-plugin-standard": "^3.0.1",
+    "eslint-config-klg": "^11.0.0",
     "intelli-espower-loader": "^1.0.1",
     "mm": "^2.2.0",
     "power-assert": "^1.4.4",
