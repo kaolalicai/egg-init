@@ -22,9 +22,15 @@ $ klg-init --type module [dest]
 
 ```bash
 $ klg-init dest
+[klg-init] fetching npm info of klg-init-config
 ? Please select a boilerplate type (Use arrow keys)
-❯ module - npm module
-  project - klg project use koa(todo)
+  ──────────────
+❯ module - npm 库项目模板 
+  model - mongoose model 模板 todo 
+  project - JavaScript 后端项目模板 todo 
+  project-ts - Typescript 后端项目模板 todo 
+  admin - 管理后台项目模板 todo 
+
 ```
 
 ## 支持的参数
