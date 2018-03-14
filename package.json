@@ -1,6 +1,6 @@
 {
   "name": "klg-init",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Init klg app helper tools.",
   "main": "lib/init_command.js",
   "scripts": {
